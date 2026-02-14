@@ -1,0 +1,45 @@
+/* Start of Global Reset & Variables */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* Dark Gradient: 3 Colors */
+    --main-bg: linear-gradient(150deg, #1a1c2c, #4a192c, #1a1c2c);
+    /* Luxury Contrast Color */
+    --luxury-cream: #f9f7f2;
+    /* Neon Accents */
+    --accent-gradient: linear-gradient(90deg, #d491ff, #ffffff);
+    --text-white: #e0e0e0;
+    --transition: 0.4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}

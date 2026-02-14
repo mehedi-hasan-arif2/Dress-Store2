@@ -1,0 +1,9 @@
+/* Start Pages Footer Section */
+.pages-footer {
+    background: #1a1c2c;
+    padding-top: 80px;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    width: 100%;
+    min-height: 400px; 
+}

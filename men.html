@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Collection | Loom & Luxe</title>
+    <link rel="shortcut icon" href="./assests/images/favicon.png!f305cw" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <header class="header-area">
+         <!-- nav section -->
+    <nav class="nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assests/images/nav logo.svg" alt="Loom & Luxe">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="combo.html">Combo</a></li>
+        </ul>
+
+           <div class="nav-icons">
+    <div class="icon-item" id="search-trigger">
+        <img src="assests/icons/search.png" alt="Search">
+    </div>
+    
+    <div class="icon-item wishlist-box" id="wishlist-trigger">
+        <img src="assests/icons/wishlist.png" alt="Wishlist">
+        <span id="wishlist-count">0</span>
+    </div>
+    
+    <div class="icon-item cart-box" id="cart-trigger">
+        <img src="assests/icons/cart.png" alt="Cart">
+        <span id="cart-count">0</span>
+    </div>
+</div>
+    </nav>
+</header>
+
+ <!-- Search Function -->
+<div id="search-bar" class="search-bar-container">
+    <div class="search-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search-input" placeholder="Search" autocomplete="off">
+    </div>
+</div>
+
+    <main id="main-content">
+     <!-- featured products section -->
+<section class="featured-products container-padding">
+     <!-- Title -->
+    <div class="section-title">
+        <span class="sub-title">PREMIUM SELECTION</span>
+        <h2>Men's <span class="highlight">Wardrobe</span></h2>
+    </div>
+
+     <!-- Product Data -->
+    <div class="product-grid" id="product-container">
+        </div>
+
+     <!-- View Button -->
+    <div class="view-all-container" id="load-more-wrap" style="display: none;">
+        <button type="button" class="view-all-btn" id="load-more-btn">
+            View More Products <i class="fas fa-layer-group"></i>
+        </button>
+    </div>
+
+    <!--  Quick View Modal Part  -->
+    <div id="quick-view-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="close-quick-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="" alt="" id="qv-img">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-badge" id="qv-badge">New Arrival</span>
+                    <h3 id="qv-title">Product Name</h3>
+                    <div class="modal-price">
+                        <span class="new-price" id="qv-price">৳ ০</span>
+                        <span class="old-price" id="qv-old-price"></span>
+                    </div>
+                    <p id="qv-desc">Discover the premium quality and craftsmanship in every detail of this exclusive piece.</p>
+                    
+                    <div class="size-wrapper">
+                        <p>Select Size:</p>
+                        <div class="size-options" id="qv-sizes-container">
+                         </div>
+                    </div>
+
+                    <div class="action-wrapper">
+                        <div class="qty-control">
+                            <button class="qty-minus" id="qv-minus">-</button>
+                            <input type="number" value="1" readonly id="qv-qty">
+                            <button class="qty-plus" id="qv-plus">+</button>
+                        </div>
+                        <button class="modal-add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- footer section -->
+<footer class="pages-footer">
+    <div class="footer-container">
+
+        <div class="footer-col brand-info">
+            <img src="assests/images/footer logo.svg" alt="Loom & Luxe" class="f-logo">
+            <p>Experience luxury fashion with our curated premium collections. Defining 2026's modern wardrobe.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="f-title">Information</h4>
+            <ul class="f-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="f-title">Secure Payment</h4>
+            <div class="f-payment">
+                <img src="assests/icons/bkash.svg" alt="bKash">
+                <img src="assests/icons/whatsApp.webp" alt="whatsapp">
+            </div>
+            <p class="f-support">Support: 01533648004</p>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="f-title">Follow Us</h4>
+            <div class="f-social-icons">
+                <a href="https://facebook.com/mehedi.hasan.arif.133022/"><img src="assests/icons/facebook.png" alt="FB"></a>
+                <a href="https://instagram.com/mharif982"><img src="assests/icons/instagram.png" alt="IG"></a>
+                <a href="https://wa.me/8801533648004" target="_blank"><img src="assests/icons/whatsApp.webp" alt="WA"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="bottom-wrap">
+            <p>&copy; 2026 Loom & Luxe Store. All Rights Reserved.</p>
+            <p class="dev-credit">Developed by <a href="https://instagram.com/mharif982" target="_blank">Mehedi Hasan Arif</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Wish List Section -->
+<div class="bag" id="wishlist-drawer">
+    <div class="bag-content">
+
+        <div class="bag-header">
+            <h3>My Wishlist</h3>
+            <button class="bag-close" id="close-wishlist">&times;</button>
+        </div>
+        
+        <div class="bag-body">
+            <div class="bag-empty empty-wishlist-box">
+                <i class="fa-regular fa-heart"></i>
+                <p>Your list is currently empty!</p>
+                <a href="#shop-category" class="bag-shop-btn" id="continue-shopping">
+                    Continue Shopping
+                </a>
+            </div>
+
+            <div id="wishlist-items-container"></div>
+        </div>
+
+        <div class="bag-footer">
+            <button class="bag-clear-btn" id="clear-wishlist">
+                Clear All Wishlist
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Cart Section -->
+<div class="bag" id="cart-drawer"> 
+    <div class="bag-content">
+
+        <div class="bag-header">
+            <h3>
+                Shopping Cart (<span id="cart-count-drawer">0</span>)
+            </h3>
+            <button class="bag-close" id="close-cart-drawer">&times;</button>
+        </div>
+        
+        <div class="bag-body">
+            <div class="bag-empty empty-cart-box" id="empty-cart-msg">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your cart is empty!</p>
+                <a href="#shop-category" class="bag-shop-btn" id="cart-continue-shop">
+                    Shop Now
+                </a>
+            </div>
+
+            <div id="cart-items-container"></div>
+        </div>
+
+        <div class="bag-footer">
+            <div class="cart-total-container">
+                <div class="total-row">
+                   <span>Total Amount:</span>
+                   <span id="cart-total-amount">৳ 0</span>
+                </div>
+
+                <button class="btn-checkout" id="checkout-btn">
+                    Proceed to Checkout
+                </button>
+
+                <button class="btn-clear-cart" id="clear-cart">
+                    Clear Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- Cart Checkout Modal -->
+<div class="modal-overlay" id="checkout-modal" >
+    <div class="modal-content checkout-modal-width">
+        <button class="close-modal" id="close-checkout-modal">&times;</button>
+        <div class="checkout-header">
+            <h3>Complete Your Order</h3>
+            <p>Please provide your delivery & payment details</p>
+        </div>
+
+        <form id="order-form" class="checkout-form">
+            <div class="form-group">
+                <input type="text" id="cust-name" placeholder="Your Full Name" required class="modern-input">
+            </div>
+            <div class="form-group">
+                <input type="text" id="cust-address" placeholder="Full Delivery Address" required class="modern-input">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="cust-phone" placeholder="Contact Number" required class="modern-input">
+            </div>
+
+            <div class="bkash-payment-card">
+                <div class="bkash-info">
+                    <img src="assests/icons/bkash 2.png" alt="bKash" class="bkash-logo">
+                    <p>Send Money to: <strong>01533648004</strong> (Personal)</p>
+                </div>
+                <input type="text" id="trx-id" placeholder="Transaction ID (TrxID)" required class="modern-input bkash-input">
+                <input type="number" id="last-digits" placeholder="Last 3 Digits of bKash Number" required class="modern-input bkash-input">
+            </div>
+
+            <button type="submit" class="whatsapp-place-order-btn">
+                <i class="fa-brands fa-whatsapp"></i> PLACE ORDER VIA WHATSAPP
+            </button>
+        </form>
+    </div>
+</div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
