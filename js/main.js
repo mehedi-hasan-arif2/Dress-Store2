@@ -333,7 +333,7 @@ if (searchInput) {
 
 /* Start of Cart & Checkout Logic */
 let cart = JSON.parse(localStorage.getItem('cart_items')) || [];
-const WHATSAPP_NUMBER = "8801533648004";
+const WHATSAPP_NUMBER = "8801830905165";
 
 // Refresh UI Function
 function updateCartUI() {
