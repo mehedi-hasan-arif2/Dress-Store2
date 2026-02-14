@@ -462,16 +462,33 @@ if (featureAddBtn) {
     }
 });
 
-// WhatsApp Order Engine
+/* Start of WhatsApp Order Engine */
 const orderForm = document.getElementById('order-form');
 if (orderForm) {
     orderForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        // Form Data Extraction
         const name = document.getElementById('cust-name').value;
         const address = document.getElementById('cust-address').value;
+        const phone = document.getElementById('cust-phone').value; 
         const totalBill = document.getElementById('cart-total-amount').innerText;
-        let itemDetails = cart.map((item, i) => `${i + 1}. ${item.name} (${item.size}) x${item.qty}`).join('\n');
-        const message = `🛍️ *Order Loom & Luxe*\nItems:\n${itemDetails}\nTotal: ${totalBill}\nName: ${name}\nAddress: ${address}`;
+        
+        // Dynamic Item Details 
+        let itemDetails = cart.map((item, i) => `${i + 1}. ${item.name} (${item.size}) - ${item.qty} টি`).join('\n');
+        
+        // Final Message String 
+        const message = `🛍️ *নতুন অর্ডার - লুম অ্যান্ড লাক্স*\n\n` +
+                        `*কাস্টমারের তথ্য:* \n` +
+                        `--------------------------\n` +
+                        `👤 নাম: ${name}\n` +
+                        `📞 ফোন নম্বর: ${phone}\n` + 
+                        `📍 ঠিকানা: ${address}\n\n` +
+                        `*অর্ডার করা পণ্যের তালিকা:* \n` +
+                        `--------------------------\n${itemDetails}\n\n` +
+                        `💰 *মোট বিল:* ${totalBill}\n\n` +
+                        `ধন্যবাদ!`;
+
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     });
 }
