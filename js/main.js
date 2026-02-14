@@ -426,6 +426,8 @@ if (featureAddBtn) {
             qty: parseInt(modal.querySelector('input')?.value) || 1
         };
         addToCart(productObj);
+
+        document.querySelectorAll(".modal-overlay").forEach(el => el.classList.remove("active"));
     }
 
     // 4. Wishlist to Cart

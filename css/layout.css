@@ -1265,6 +1265,7 @@
 }
 
 /* =================== Item Card =================== */
+
 /* Wishlist Items */
 .wishlist-item {
     display: flex; 
@@ -1472,21 +1473,7 @@
     color: #fff;
 }
 
-/* Cart Checkout-Modal */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
-}
-
-.modal-overlay.active {
-    display: flex;
-}
-
+/* Checkout Modal Layout */
 .checkout-modal-width {
     background: #fff;
     width: 400px;
@@ -1530,6 +1517,10 @@
     margin-bottom: 15px;
     border: 1px dashed #e2136e;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .bkash-logo {
@@ -1537,21 +1528,14 @@
     margin-bottom: 8px;
 }
 
+.bkash-info {
+    width: 100%; 
+}
+
 .bkash-info p {
     font-size: 0.95rem;
     color: #333;
     margin-bottom: 12px;
-}
-
-.bkash-payment-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.bkash-info {
-    width: 100%; 
 }
 
 .bkash-input {
@@ -1566,10 +1550,9 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: auto;
+    width: 100%;
     min-width: 200px;
     margin: 5px auto 0;
-    display: flex;
     padding: 12px 25px;
     background: #25D366;
     color: #fff;
@@ -1586,17 +1569,6 @@
     transform: translateY(-1px);
 }
 
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #666;
-}
-
 /* Start of Products Modal */
 .modal-overlay {
     position: fixed;
@@ -1616,6 +1588,23 @@
     visibility: visible;
 }
 
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #e74c3c;
+}
+
 .modal-content {
     background: #fff;
     width: 90%;
@@ -1631,18 +1620,6 @@
     transform: scale(1);
 }
 
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 35px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #333;
-    z-index: 10;
-}
-
 .modal-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1650,7 +1627,6 @@
     align-items: center;
 }
 
-/* modal img */
 .modal-img {
     width: 100%;
     height: 100%;
@@ -1668,7 +1644,6 @@
     border-radius: 12px;
 }
 
-/* modal Text */
 .modal-info h3 {
     font-size: 28px;
     color: #1a1c2c;
@@ -1752,7 +1727,6 @@
     font-size: 16px;
 }
 
-/* modal add cart button */
 .modal-add-btn {
     flex: 1;
     background: #1a1c2c;
@@ -1770,182 +1744,6 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(157, 80, 187, 0.3);
 }
-
-
-/* Start of Products Modal */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; 
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: #fff;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 20px;
-    position: relative;
-    padding: 35px;
-    transform: scale(0.8);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.modal-overlay.active .modal-content {
-    transform: scale(1);
-}
-
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 35px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #333;
-    z-index: 10;
-}
-
-.modal-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-/* modal img */
-.modal-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.modal-img img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-/* modal Text */
-.modal-info h3 {
-    font-size: 28px;
-    color: #1a1c2c;
-    margin: 10px 0;
-    font-weight: 800;
-}
-
-.modal-info p {
-    color: #444; 
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.modal-badge {
-    color: #9d50bb;
-    font-weight: 700;
-    font-size: 13px;
-    text-transform: uppercase;
-    display: block;
-}
-
-.modal-price {
-    margin: 15px 0;
-}
-
-.new-price { font-size: 26px; font-weight: 800; color: #9d50bb; }
-.old-price { text-decoration: line-through; color: #888; margin-left: 10px; font-size: 18px; }
-
-.size-options {
-    display: flex;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.size-btn {
-    padding: 8px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background: #fff;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.size-btn.active, .size-btn:hover {
-    background: #1a1c2c;
-    color: #fff;
-    border-color: #1a1c2c;
-}
-
-.action-wrapper {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.qty-control {
-    display: flex;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.qty-control button {
-    padding: 10px 15px;
-    border: none;
-    background: #f8f8f8;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.qty-control button:hover { background: #eee; }
-
-.qty-control input {
-    width: 45px;
-    text-align: center;
-    border: none;
-    font-weight: 800;
-    font-size: 16px;
-}
-
-/* modal add cart button */
-.modal-add-btn {
-    flex: 1;
-    background: #1a1c2c;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.modal-add-btn:hover {
-    background: #9d50bb;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(157, 80, 187, 0.3);
-}
-
 
 
 
@@ -2108,7 +1906,43 @@
     .category-card {
         height: 250px;
     }
+     
+    /* Trust Badge */
+    .trust-container {
+        padding: 20px 10px;
+    }
 
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .trust-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 5px;
+        gap: 5px;
+        border-radius: 10px;
+    }
+
+    .icon-box img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .trust-info h4 {
+        font-size: 12px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .trust-info p {
+        font-size: 9px; 
+        margin-top: 2px;
+        line-height: 1.1;
+    }
+    
     /* Flash Sale Section */
     .sale-glass-card {
         flex-direction: column;
@@ -2169,27 +2003,70 @@
         right: -100%;
     }
 
-    /* Modals Adjustment */
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
+    /* Modals */
+   .modal-content {
+    width: 92%;
+    padding: 15px; 
+    max-height: 85vh; 
+    overflow-y: auto;
+    border-radius: 15px;
+}
 
-    .modal-body {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.modal-body {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+}
 
-    .modal-info h3 {
-        font-size: 20px;
-    }
+.modal-img {
+    height: 180px; 
+}
 
+.modal-img img {
+    max-height: 100%;
+    width: auto;
+}
+
+.modal-info h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.modal-info p {
+    font-size: 13px; 
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.new-price {
+    font-size: 20px;
+}
+
+.old-price {
+    font-size: 14px;
+}
+
+.size-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.action-wrapper {
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.modal-add-btn {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}
     .checkout-modal-width {
         width: 90%;
     }
-
-    
 
 }
