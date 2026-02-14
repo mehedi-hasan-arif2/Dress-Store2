@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
             productContainer.innerHTML = `
                 <div class="no-results-container">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <h3>No products found!</h3>
-                    <p>Try searching for something else.</p>
+                    <h3>কোনও পণ্য পাওয়া যায়নি!</h3>
+                    <p>অনুগ্রহ করে অন্য কিছু খুঁজে দেখুন।</p>
                 </div>`;
             if (loadMoreWrap) loadMoreWrap.style.display = "none";
             return;
