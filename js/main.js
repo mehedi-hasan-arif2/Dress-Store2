@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${product.oldPrice ? `<span class="old-price">৳ ${product.oldPrice}</span>` : ""}
                     </div>
                     <button class="add-to-cart-btn" data-id="${product.id}">
-                        <span>Add to Cart</span> 
+                        <span>ঝুলিতে যোগ করুন</span> 
                         <i class="fa-solid fa-basket-shopping"></i>
                     </button>
                 </div>
@@ -405,22 +405,12 @@ document.addEventListener('click', (e) => {
     if (e.target.closest('#cart-trigger')) cartDrawer.classList.add('active');
     if (e.target.closest('#close-cart-drawer')) cartDrawer.classList.remove('active');
 
-    // 2. Feature Section "Add to Cart" Button
-    const featureAddBtn = e.target.closest('.add-to-cart-btn');
-    if (featureAddBtn) {
-        const id = parseInt(featureAddBtn.getAttribute('data-id'));
-        const product = products.find(p => p.id === id);
-        if (product) {
-            addToCart({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.img,
-                size: "M",
-                qty: 1
-            });
-        }
-    }
+    // 2. Feature Section "Add to Cart" Button to Open Modal
+const featureAddBtn = e.target.closest('.add-to-cart-btn');
+if (featureAddBtn) {
+    const id = parseInt(featureAddBtn.getAttribute('data-id'));
+    openQuickView(id);
+}
 
     // 3. Modal Add Button (Quick View & Flash Sale)
     const modalBtn = e.target.closest('.modal-add-btn');
